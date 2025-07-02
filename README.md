@@ -24,7 +24,7 @@ State Display System ← SSE Stream ← vsync API ← Vote Updates
 ### Base URL
 
 ```
-http://localhost:8091
+httpss://sync.synchronic27.labs.canva-internal.dev
 ```
 
 ### Health Check
@@ -64,7 +64,7 @@ Content-Type: multipart/form-data
 ```bash
 curl -X POST \
   -F "file=@votes.rsu" \
-  "http://localhost:8091/api/votes/publish/Izzi"
+  "httpss://sync.synchronic27.labs.canva-internal.dev/api/votes/publish/Izzi"
 ```
 
 **Success Response:**
@@ -106,7 +106,7 @@ GET /api/votes/subscribe/{state}
 **Example Request:**
 
 ```bash
-curl -N "http://localhost:8091/api/votes/subscribe/Izzi"
+curl -N "httpss://sync.synchronic27.labs.canva-internal.dev/api/votes/subscribe/Izzi"
 ```
 
 **Response Format:**
@@ -246,7 +246,7 @@ Line 7: percentage must be between 0 and 100
 **Upload:**
 
 ```bash
-curl -X POST -F "file=@votes.rsu" "http://localhost:8091/api/votes/publish/Izzi"
+curl -X POST -F "file=@votes.rsu" "https://sync.synchronic27.labs.canva-internal.dev/api/votes/publish/Izzi"
 ```
 
 ## Error Handling and Troubleshooting
@@ -290,7 +290,7 @@ curl -X POST -F "file=@votes.rsu" "http://localhost:8091/api/votes/publish/Izzi"
 **Health Check:**
 
 ```bash
-curl http://localhost:8091/healthz
+curl https://sync.synchronic27.labs.canva-internal.dev/healthz
 ```
 
 **Test Upload:**
@@ -300,13 +300,13 @@ curl http://localhost:8091/healthz
 echo "1,1,1000,50.0,Test Upload" > test.rsu
 
 # Upload
-curl -X POST -F "file=@test.rsu" "http://localhost:8091/api/votes/publish/Izzi"
+curl -X POST -F "file=@test.rsu" "https://sync.synchronic27.labs.canva-internal.dev/api/votes/publish/Izzi"
 ```
 
 **Test Subscription:**
 
 ```bash
-curl -N "http://localhost:8091/api/votes/subscribe/Izzi"
+curl -N "https://sync.synchronic27.labs.canva-internal.dev/api/votes/subscribe/Izzi"
 ```
 
 ## Support
