@@ -24,7 +24,7 @@ State Display System ← SSE Stream ← vsync API ← Vote Updates
 ### Base URL
 
 ```
-httpss://sync.synchronic27.labs.canva-internal.dev
+https://sync.synchronic27.labs.canva-internal.dev
 ```
 
 ### Health Check
@@ -64,7 +64,7 @@ Content-Type: multipart/form-data
 ```bash
 curl -X POST \
   -F "file=@votes.rsu" \
-  "httpss://sync.synchronic27.labs.canva-internal.dev/api/votes/publish/Izzi"
+  "https://sync.synchronic27.labs.canva-internal.dev/api/votes/publish/Izzi"
 ```
 
 **Success Response:**
@@ -106,7 +106,7 @@ GET /api/votes/subscribe/{state}
 **Example Request:**
 
 ```bash
-curl -N "httpss://sync.synchronic27.labs.canva-internal.dev/api/votes/subscribe/Izzi"
+curl -N "https://sync.synchronic27.labs.canva-internal.dev/api/votes/subscribe/Izzi"
 ```
 
 **Response Format:**
